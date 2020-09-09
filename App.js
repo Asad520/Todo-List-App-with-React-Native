@@ -9,26 +9,13 @@ import {
 import Header from "./components/Header";
 import Todo from "./components/Todo";
 import AddTodo from "./components/AddTodo";
+import List from "./components/Todos";
 export default function App() {
-  const [todos, setTodos] = useState([
-    {
-      text: "Make tea",
-      key: "1",
-    },
-    {
-      text: "Commit git changes",
-      key: "2",
-    },
-    {
-      text: "Sleep",
-      key: "3",
-    },
-  ]);
+  const [todos, setTodos] = useState(List);
 
   const textHandler = (text) => {
     if (text !== "") {
       setTodos((prevTodos) => {
-        console.log(text);
         return [{ text: text, key: Math.random().toString() }, ...prevTodos];
       });
     }
@@ -66,8 +53,12 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 40,
+    backgroundColor: "#2E4053",
+    flex: 1,
   },
   list: {
     marginTop: 20,
+
+    flex: 1,
   },
 });
