@@ -14,8 +14,10 @@ const styles = StyleSheet.create({
     height: 80,
     paddingTop: 38,
     backgroundColor: "red",
+    marginTop: 30,
   },
   title: {
+    marginTop: -10,
     textAlign: "center",
     color: "#fff",
     fontSize: 25,
